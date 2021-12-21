@@ -6,6 +6,6 @@
 
 Runs the program using a handler function.
 
-## Authors
+## Author
 
 - Colin McMcormack, cmcco3@ocdsb.ca
