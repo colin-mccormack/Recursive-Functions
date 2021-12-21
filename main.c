@@ -2,17 +2,16 @@
 // Created by colin on 12/20/2021.
 //
 
-#include <stdio.h>
+#include "questions.h"
 
-/*
+ int main() {
 
-     int main() {
+     //Q01();
+     //Q02();
+     //Q03();
+     Q04();
 
-        printf ("Hello world\n");
+}
 
-
-    }
-
- */
 
 

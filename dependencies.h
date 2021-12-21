@@ -9,6 +9,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "symbolics.h"
+#define MAX_STRING_LENGTH 100
 
 #endif //RECURSIVE_FUNCTIONS_DEPENDENCIES_H

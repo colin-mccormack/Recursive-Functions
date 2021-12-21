@@ -2,10 +2,9 @@
 // Created by colin on 12/20/2021.
 //
 
-#include "dependencies.h"
-#define QUESTION 1
+#include "../dependencies.h"
 
-void charCount (char *s, char c, int *index, int *count) {
+static void charCount (char *s, char c, int *index, int *count) {
 
     if (!s[*index])
         return;
@@ -19,9 +18,9 @@ void charCount (char *s, char c, int *index, int *count) {
 
 }
 
-int main() {
+int Q01() {
 
-    printf ("\nCurrently in Q0%i : ", QUESTION);
+    printf ("\nCurrently in Q0%i : ", 1);
     printf ("Count number of times char is in string\n");
 
     char c;
@@ -40,5 +39,7 @@ int main() {
     charCount (string, c, &index, &count);
 
     printf ("The char appears in the string %i times.\n", count);
+
+    return 0;
 
 }
