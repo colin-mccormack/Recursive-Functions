@@ -2,6 +2,8 @@
 // Created by colin on 12/20/2021.
 //
 
+#include "../dependencies.h"
+
 void reversePrint (char *s) {
 
     if (! *s )

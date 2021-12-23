@@ -2,6 +2,8 @@
 // Created by colin on 12/20/2021.
 //
 
+#include "../dependencies.h"
+
 static inline void arithSum (int min, int max, int *sum) {
 
     (*sum) = (max - min + 1) * ((min + max) / 2);
