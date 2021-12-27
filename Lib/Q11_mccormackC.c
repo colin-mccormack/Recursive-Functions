@@ -1,21 +1,21 @@
 //
-// Created by colin on 12/22/2021.
+// Created by colin on 12/23/2021.
 //
 
-static int myStrLen(char *s, int i) {
+static int myStrLenStringParam(char *s) {
 
-    if ( s[i] )
-        return myStrLen(s, i + 1);
+    if ( ! ( *s ) )
+        return 0;
 
-    return i;
+    return ( myStrLenStringParam( s + 1 ) + 1 );
 
 }
 
-int Q09() {
+int Q11() {
 
-    printf ("\nCurrently in Q0%i : ", 9);
+    printf ("\nCurrently in Q0%i : ", 11);
     printf ("Determine the number of characters in a string using the following interface: \n"
-            "int myStrLen(char *s, int i) \n");
+            "int myStrLen(char *s) \n");
 
     int length = 0;
     char string[MAX_STRING_LENGTH];
@@ -24,10 +24,11 @@ int Q09() {
     scanf ("%s", string);
     fflush(stdin);
 
-    length = myStrLen (string, 0);
+    length = myStrLenStringParam (string);
 
     printf ("Your string is %i characters long.\n", length);
 
     return 0;
 
 }
+

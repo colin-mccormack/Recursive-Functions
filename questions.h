@@ -50,4 +50,29 @@
 #include "Lib/Q09_mccormackC.c"
 #endif
 
+#ifndef Q10_mccormackC
+#define  Q10_mccormackC
+#include "Lib/Q10_mccormackC.c"
+#endif
+
+#ifndef Q11_mccormackC
+#define  Q11_mccormackC
+#include "Lib/Q11_mccormackC.c"
+#endif
+
+#ifndef Q12_mccormackC
+#define  Q12_mccormackC
+#include "Lib/Q12_mccormackC.c"
+#endif
+
+#ifndef Q13_mccormackC
+#define  Q13_mccormackC
+#include "Lib/Q13_mccormackC.c"
+#endif
+
+#ifndef Q14_mccormackC
+#define  Q14_mccormackC
+#include "Lib/Q14_mccormackC.c"
+#endif
+
 #endif //RECURSIVE_FUNCTIONS_QUESTIONS_H
