@@ -24,7 +24,7 @@ int Q09() {
     scanf ("%s", string);
     fflush(stdin);
 
-    length = myStrLen (string, 0);
+    length = myStrLen (string, FIRST_CHAR);
 
     printf ("Your string is %i characters long.\n", length);
 

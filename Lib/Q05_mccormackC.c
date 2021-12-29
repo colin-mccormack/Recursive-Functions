@@ -4,14 +4,12 @@
 
 #include "../dependencies.h"
 
-static void rArraySum (int min, int max, int *array, int *sum) {
+static int rArraySum (int min, int max, int *array) {
 
     if (min > max)
-        return;
+        return 0;
 
-    rArraySum((min + 1), max, array, sum);
-
-    *sum += array[min];
+    return ( array[min] + rArraySum( (min + 1), max, array) );
 
 }
 
@@ -21,17 +19,19 @@ int Q05() {
     printf ("Determine the sum of the integers between min and max inclusive in our array\n");
 
     int min, max, sum;
-    int array[MAX_INTS] = {1,2,3,4,5,6,7,8,9,10};
+    int array[MAX_INTS] = {0,1,2,3,4,5,6,7,8,9};
 
-    sum = 0;
+    do {
 
-    printf ("Please enter the min of the range : ");
-    scanf ("%i", &min);
-    fflush(stdin);
-    printf ("Please enter the min of the range : ");
-    scanf ("%i", &max);
+        printf("Please enter the min of the range : ");
+        scanf("%i", &min);
+        fflush(stdin);
+        printf("Please enter the min of the range : ");
+        scanf("%i", &max);
 
-    rArraySum(min, max, array, &sum);
+    } while (min < 0 || max > 9);
+
+    sum = rArraySum(min, max, array);
 
     printf ("The sum is %i.\n", sum);
 

@@ -4,14 +4,12 @@
 
 #include "../dependencies.h"
 
-static void rSum (int min, int max, int *sum) {
+static int rSum (int min, int max) {
 
     if (min > max)
-        return;
+        return 0;
 
-    rSum((min + 1), max, sum);
-
-    *sum += min;
+    return ( ( rSum((min + 1), max) ) + min );
 
 }
 
@@ -22,15 +20,13 @@ int Q02() {
 
     int min, max, sum;
 
-    sum = 0;
-
     printf ("Please enter the min of the range : ");
     scanf ("%i", &min);
     fflush(stdin);
     printf ("Please enter the min of the range : ");
     scanf ("%i", &max);
 
-    rSum(min, max, &sum);
+    sum = rSum(min, max);
 
     printf ("The sum is %i.\n", sum);
 

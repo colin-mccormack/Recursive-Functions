@@ -1,8 +1,6 @@
 # Recursive-Programs
 
-## Program Structure:
-
-### Headers
+### Program Structure: Headers
 
 #### Dependencies
 Include all necessary libraries and also declare all symbolic constants in one place.
@@ -11,10 +9,19 @@ Include all necessary libraries and also declare all symbolic constants in one p
 Use conditional require statements to include all individual question handlers in one place.
 Public functions in these files are henceforth imported and then implemented in main.
 
-### Program Files:
+### Program Structure: Unit testing
+
+#### Test
+All unit tests are preformed using the ```<assert.h>``` header as included in dependencies.h.
+Unit tests can be turned off by toggling user defined preprocessor **UNIT_TESTING** (set to zero for off).
+To save time while compiling the option for uncommenting the **NDEBUG** preprocessor directive is supplied. This will tell the compiler not to bother with even looking at any part of an assert statement.
+
+### Program Structure: Main
 
 #### Main
 Runs the program using each handler function.
+
+### Program Structure: Questions
 
 #### Q01
 Determine the number of times a given character occurs in a given string. For example, if s = “dogfood” and c = ‘o’ then your function would return 3.
@@ -44,6 +51,21 @@ Using a : Recursive solution that is O(3^n), Recursive solution that is O(n), It
 #### Q09
 Determine the number of characters in a string using the following interface: int myStrLen(char *s, int i) in which the calling function will always pass zero to i.
 
+#### Q10
+Determine the number of characters in a string using the following interface: int myStrLen(char *s, int i) in which the calling function will always pass the index of the last character in s to i.
+
+#### Q11
+Determine the number of characters in a string using the following interface: int myStrLen(char *s). Obviously this is the optimal solution to this problem.
+
+#### Q12
+Determine if a given string is a Palindrome. Your function should return 0 if it is not a palindrome and 1 if it is a palindrome. Here is the interface I would like you to use: int isPalindrome (char *s, int lo, int hi) in which the calling function will pass zero to lo and the index of the last character in the string to hi.
+
+#### Q13
+Determine the value of a given string according to the following rules: 10 points for lowercase chars, 20 points for uppercase chars, 50 points for number chars, 100 points for ‘*’ and zero points for all other characters.
+
+#### Q14
+Determine the number of multiples of mult in an  array A of integers from index lo to hi. Here is the interface: int countMults(int *A, int lo, int hi, int mult). Assume that both lo and hi are less than numElements.
+
 ## Author
 
-- Colin McMcormack, cmcco3@ocdsb.ca
+- Colin McCormack, cmcco3@ocdsb.ca

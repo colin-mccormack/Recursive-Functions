@@ -4,9 +4,9 @@
 
 #include "../dependencies.h"
 
-static inline void arithSum (int min, int max, int *sum) {
+static inline int arithSum (float min, float max) {
 
-    (*sum) = (max - min + 1) * ((min + max) / 2);
+    return (max - min + 1) * (( min + max) / 2);
 
 }
 
@@ -15,17 +15,16 @@ int Q03() {
     printf ("\nCurrently in Q0%i : ", 3);
     printf ("Determine the sum of the integers between min and max inclusive\n");
 
-    int min, max, sum;
-
-    sum = 0;
+    float min, max;
+    int sum;
 
     printf ("Please enter the min of the range : ");
-    scanf ("%i", &min);
+    scanf ("%f", &min);
     fflush(stdin);
     printf ("Please enter the min of the range : ");
-    scanf ("%i", &max);
+    scanf ("%f", &max);
 
-    arithSum(min, max, &sum);
+    sum = arithSum(min, max);
 
     printf ("The sum is %i.\n", sum);
 

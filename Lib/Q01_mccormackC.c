@@ -4,17 +4,16 @@
 
 #include "../dependencies.h"
 
-static void charCount (char *s, char c, int *index, int *count) {
+static int charCount (char *s, char c) {
 
-    if (!s[*index])
-        return;
+    if (! ( *s ) )
+        return 0;
 
-    if (s[*index] == c)
-        (*count)++;
+    if (*s == c)
+        return charCount (s + 1, c) + 1;
 
-    (*index)++;
-
-    charCount (s, c, index, count);
+    else
+        return charCount (s + 1, c);
 
 }
 
@@ -25,10 +24,7 @@ int Q01() {
 
     char c;
     char string[MAX_STRING_LENGTH];
-    int count, index;
-
-    count = 0;
-    index = 0;
+    int count;
 
     printf ("Please enter the sting : ");
     scanf ("%s", string);
@@ -36,7 +32,7 @@ int Q01() {
     printf ("Please enter the char to count : ");
     scanf (" %c", &c);
 
-    charCount (string, c, &index, &count);
+    count = charCount (string, c);
 
     printf ("The char appears in the string %i times.\n", count);
 

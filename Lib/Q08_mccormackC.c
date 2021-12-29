@@ -36,7 +36,7 @@ int Q08() {
 
     printf ("\nCurrently in Q0%i : ", 8);
     printf ("Determine the nth term of the following sequence: \n"
-            "1, 2, -2, 1, 1, 0, 2, 3, 5, 8, … \n"
+            "1, 2, -2, 1, 1, 0, 2, 3, 5, 10, … \n"
             "Here you can see that the nth term is the sum of the three previous terms.\n");
 
     int nth3n, nthOn, nthIt, n;
@@ -51,8 +51,8 @@ int Q08() {
     } while (n > MAX_ELEMENTS);
 
     nth3n = nthTerm3n(arr1, n);
-    nthOn = nthTermOn (arr2, n, 3);
-    nthIt = nthTermIt (arr3, n, 3);
+    nthOn = nthTermOn (arr2, n, LENGTH_OF_ARR);
+    nthIt = nthTermIt (arr3, n, LENGTH_OF_ARR);
 
     printf ("The %i term in the sequence using the recursive O(3^n) time complexity solution is %i.\n", n, nth3n);
     printf ("The %i term in the sequence using the recursive O(n) time complexity solution is %i.\n", n, nthOn);

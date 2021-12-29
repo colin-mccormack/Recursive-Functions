@@ -2,7 +2,7 @@
 // Created by colin on 12/25/2021.
 //
 
-static int countMults(int *A, int lo, int hi, int mult) {
+extern int countMults(int *A, int lo, int hi, int mult) {
 
     if (lo > hi)
         return 0;
