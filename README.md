@@ -52,7 +52,7 @@ Using a : Recursive solution that is O(3^n), Recursive solution that is O(n), It
 Determine the number of characters in a string using the following interface: int myStrLen(char *s, int i) in which the calling function will always pass zero to i.
 
 #### Q10
-Determine the number of characters in a string using the following interface: int myStrLen(char *s, int i) in which the calling function will always pass the index of the last character in s to i.
+Determine the number of characters in a string using the following interface: int myStrLen(char *s, int i) in which the calling function will always pass the index of the last character in s to i. The last character in a string is intrepreted as the null terminator for the purpose of this program.
 
 #### Q11
 Determine the number of characters in a string using the following interface: int myStrLen(char *s). Obviously this is the optimal solution to this problem.
